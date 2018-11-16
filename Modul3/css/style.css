@@ -1,0 +1,117 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  font-family: Playfair display;
+  color: #626262;
+
+}
+
+.page-nav {
+  padding: 78px 0 104px 0;
+}
+
+.site-navigation {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.site-navigation li {
+  display: inline-block;
+}
+
+.site-navigation li:not(:last-child) {
+  margin-right: 106px;
+}
+
+.site-navigation a {
+  display: block;
+  color: #626262;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-navigation a:hover, 
+.site-navigation a:focus {
+  color: #03a9f4;
+}
+
+.info-block {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+/*вот здесь вопрос: формула срабатывает на 3 и на 5 блок li. а не на 5 и 6. Почему и как это исправить?*/
+.info-block:ntn-last-child(-n +2) {
+  margin-bottom: 0;
+}
+
+.info-block-item {
+  width: 420px;
+  display: inline-block;
+  margin-right: 60px;
+  font-size: 14px;
+
+}
+.info-block-item:nth-child(2n) {
+  margin-right: 0;
+  margin-bottom: 136px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  
+}
+/*img:not(:first-child(2n) {
+margin-top: 132px;  
+}*/
+.info-block-item h5 {
+  font-size: 14px;
+  color: #c8c3b8;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-family: ubuntu;
+  margin-bottom: 30px;
+  
+}
+.info-block-item h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+.info-p {
+ padding-right: 4px;
+}
+
+
+.button {
+  display: block;
+  border: 1px solid #111111;
+  /*border-radius: 2px;*/
+  width: 166px;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  /*margin-top: 100px;*/
+  background-color: #white;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #f1eee7; 
+}
