@@ -141,7 +141,7 @@ text-transform: uppercase;
   font-size: 14px;
 }
 
-.info-block-item:ntn-last-child(-n + 2) {
+.info-block-item:nth-last-child(-n + 2) {
   margin-bottom: 0;
 }
 
