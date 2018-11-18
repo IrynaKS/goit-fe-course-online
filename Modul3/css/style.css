@@ -44,7 +44,21 @@ html {
 .site-navigation a:focus {
   color: #03a9f4;
 }
-
+.visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+.info {
+  padding-bottom: 70px;
+}
 .info-block {
   list-style: none;
   margin: 0;
@@ -53,20 +67,24 @@ html {
 }
 
 /*вот здесь вопрос: формула срабатывает на 3 и на 5 блок li. а не на 5 и 6. Почему и как это исправить?*/
-.info-block:ntn-last-child(-n +2) {
-  margin-bottom: 0;
-}
+
+
 
 .info-block-item {
   width: 420px;
   display: inline-block;
   margin-right: 60px;
+  margin-bottom: 136px;
   font-size: 14px;
-
 }
+
+.info-block-item:ntn-last-child(-n + 2) {
+  margin-bottom: 0;
+}
+
 .info-block-item:nth-child(2n) {
   margin-right: 0;
-  margin-bottom: 136px;
+  /*margin-bottom: 136px;*/
 }
 
 img {
@@ -74,44 +92,49 @@ img {
   max-width: 100%;
   height: auto;
   margin-bottom: 30px;
-  
 }
-/*img:not(:first-child(2n) {
-margin-top: 132px;  
-}*/
-.info-block-item h5 {
+
+.info-subtitle {
   font-size: 14px;
   color: #c8c3b8;
   font-weight: lighter;
   text-transform: uppercase;
   font-family: ubuntu;
+  margin: 0;
   margin-bottom: 30px;
-  
 }
-.info-block-item h2 {
+
+.info-title {
+  margin: 0:
+  margin-bottom: 40px;
+}
+
+.info-block-item h3 {
   font-size: 30px;
   margin-bottom: 40px;
   text-align: left;
 }
-.info-p {
- padding-right: 4px;
-}
 
+.info-p {
+ margin: 0;
+ padding-right: 4px;
+ line-height: 1.5;
+}
 
 .button {
   display: block;
   border: 1px solid #111111;
-  /*border-radius: 2px;*/
   width: 166px;
   padding: 20px 0;
   margin: 0 auto;
   text-decoration: none;
   text-align: center;
   font-size: 20px;
-  /*margin-top: 100px;*/
   background-color: #white;
   cursor: pointer;
 }
-.button:hover {
+
+.button:hover,
+.button:focus {
   background-color: #f1eee7; 
 }
