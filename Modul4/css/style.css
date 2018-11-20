@@ -167,11 +167,15 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.product-list-item:hover,
-.product-list-item:focus {
-  background-color: #7fd9c7;
-}
+.product-list-item-sign:hover,
+.product-list-item-sign:focus {
+  background-color: #1abc9c;
 
+}
+.product-list-item-price:hover,
+.product-list-item-price:focus {
+  background-color: #7fd9c7;
+} 
 /*LATEST NEWS*/
 
 .latest-news {
