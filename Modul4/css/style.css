@@ -8,196 +8,235 @@ html {
   box-sizing: inherit;
 }
 
-/*font-family: 'Open Sans', sans-serif;*/
-/*font-family: 'Roboto', sans-serif;*/
-/*background-color: #e8effc; для картинок*/
-
-/*.featured-products::after {
-content: "";
-display: block;
-width: 164px;
-margin: 0 auto;
-border-bottom: 8px solid #1abc9c;
-} - полосочка под заголовком*/
 body {
- font-family: 'Roboto', sans-serif; 
- color: #555252;
- font-size: 14px;
- line-height: 1,5;
+  font-family: "Roboto", sans-serif;
+  color: #555252;
+  font-size: 14px;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
 }
 
 .container {
-  width: 1110px;
+  width: 1170px;
   margin: 0 auto;
+  padding: 43px 0 111px 0;
+  box-sizing: border-box;
 }
 
+/*LOGO AND MENU*/
+
 .site-logo {
-display: inline-block;
-font-family: 'Roboto';
-font-size: 30px;
-font-weight: lighter;
-text-decoration: none;
-text-transform: uppercase;
-color: #555252;
+  float: left;
+  font-family: "Roboto light", sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #555252;
 }
 
 .site-logo::first-letter {
-color: #1abc9c;
-font-family: 'Roboto';
-font-weight: bold;
+  color: #1abc9c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 
 .site-navigation {
-display: inline-block;
-float: right;
-margin: 0;
-padding: 0;
-}
-
-.site-navigation li {
-display: inline-block;
-
-}
-.site-navigation li:not(:last-child) {
-  margin-right: 34px;
-}
-
-.site-navigation a {
-display: block;
-color: #555252;
-font-family: 'Open Sans', sans-serif;
-font-size: 14px;
-font-weight: bold;
-text-decoration: none;
-text-transform: uppercase;
-
-}
-.page-nav {
-  padding: 78px 0 104px 0;
-}
-
-/*.site-navigation {
-  padding: 0;
+  float: right;
+  width: 480px;
   margin: 0;
-  text-align: center;
+  margin-top: 9px;
+  padding: 0;
+  list-style: none;
 }
 
 .site-navigation li {
-  display: inline-block;
+  float: left;
 }
 
 .site-navigation li:not(:last-child) {
-  margin-right: 106px;
+  margin-right: 30px;
 }
 
 .site-navigation a {
-  display: block;
-  color: #626262;
+  color: #0f0101;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
-  }*/
+}
 
-.site-navigation a:hover, 
+.site-navigation a:hover,
 .site-navigation a:focus {
   color: #1abc9c;
 }
-.visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
-   position: absolute;
-   width: 1px;
-   height: 1px;
-   margin: -1px;
-   border: 0;
-   padding: 0;
-   white-space: nowrap;
-   clip-path: inset(100%);
-   clip: rect(0 0 0 0);
-   overflow: hidden;
+
+/*FEATURED PRODUCTS*/
+
+.featured-products {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #555252;
 }
-.info {
-  padding-bottom: 70px;
+
+.featured-products::after {
+  content: "";
+  display: block;
+  width: 164px;
+  margin: 0 auto;
+  border-bottom: 8px solid #1abc9c;
+  padding-bottom: 32px;
 }
-.info-block {
+
+
+.product-list-item {
+  float: left;
+  width: 255px;
+  margin-right: 30px;
+  margin-bottom: 27px;
+  /*font-size: 14px;*/
   list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 0;
+  line-height: 40px;
 }
 
-/*вот здесь вопрос: формула срабатывает на 3 и на 5 блок li. а не на 5 и 6. Почему и как это исправить?*/
-
-
-
-.info-block-item {
-  width: 420px;
-  display: inline-block;
-  margin-right: 60px;
-  margin-bottom: 136px;
-  font-size: 14px;
+.product-list-item:nth-child(4n) {
+  margin-right: 0;
 }
 
-.info-block-item:nth-last-child(-n + 2) {
+.product-list-item:nth-last-child(-n + 4) {
   margin-bottom: 0;
 }
 
-.info-block-item:nth-child(2n) {
-  margin-right: 0;
-  /*margin-bottom: 136px;*/
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 30px;
-}
-
-.info-subtitle {
-  font-size: 14px;
-  color: #c8c3b8;
-  font-weight: lighter;
-  text-transform: uppercase;
-  font-family: ubuntu;
+.product-list-item-sign {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
   margin: 0;
-  margin-bottom: 30px;
-}
-
-.info-title {
-  margin: 0:
-  margin-bottom: 40px;
-}
-
-.info-block-item h3 {
-  font-size: 30px;
-  margin-bottom: 40px;
+  padding: 0;
+  padding-left: 14px;
+  width: 200px;
+  height: 40px;
+  text-transform: uppercase;
+  float: left;
+  color: #fff;
+  box-sizing: border-box;
+  background-color: #323232;
+  background-position: center;
   text-align: left;
 }
 
-.info-p {
- margin: 0;
- padding-right: 4px;
- line-height: 1.5;
+.product-list-item-price {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  width: 55px;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  text-transform: uppercase;
+  float: right;
+  color: #fff;
+  box-sizing: border-box;
+  background-color: #8c8c8c;
+  background-position: center;
+  text-align: center;
+}
+
+.product-list-item:hover,
+.product-list-item:focus {
+  background-color: #7fd9c7;
+}
+
+/*LATEST NEWS*/
+
+.latest-news {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #555252;
+}
+
+.latest-news::after {
+  content: "";
+  display: block;
+  width: 164px;
+  margin: 0 auto;
+  margin-top: 32px;
+  border-bottom: 8px solid #1abc9c;
+}
+
+.news-list-item {
+  float: left;
+  width: 350px;
+  margin-bottom: 18px;
+  margin-right: 30px;
+  font-family: "open sans", sans-serif;
+  font-size: 14px;
+  list-style: none;
+}
+
+.news-list-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.news-head {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 18px 0 32px 0;
+}
+
+.news-head::after {
+  content: "";
+  display: block;
+  width: 135px;
+  margin-top: 15px;
+  border-bottom: 3px solid #1abc9c;
 }
 
 .button {
+  float: left;
   display: block;
-  border: 1px solid #111111;
-  width: 166px;
-  padding: 20px 0;
+  border: none;
+  border-radius: 2px;
+  width: 160px;
+  padding: 18px 0;
   margin: 0 auto;
   text-decoration: none;
   text-align: center;
-  font-size: 20px;
-  background-color: #white;
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: #1abc9c;
   cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
-  background-color: #f1eee7; 
+  background-color: #7fd9c7;
 }
