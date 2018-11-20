@@ -167,13 +167,12 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
-.product-list-item-sign:hover,
-.product-list-item-sign:focus {
+.product-list-item:hover .product-list-item-sign{
   background-color: #1abc9c;
-
 }
-.product-list-item-price:hover,
-.product-list-item-price:focus {
+
+
+.product-list-item:hover .product-list-item-price{
   background-color: #7fd9c7;
 } 
 /*LATEST NEWS*/
